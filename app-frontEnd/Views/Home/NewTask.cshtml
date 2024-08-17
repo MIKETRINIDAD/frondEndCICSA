@@ -1,0 +1,12 @@
+﻿<form id="Form-Task">
+    <div id="Datos-Task">
+        @await Html.PartialAsync("DateTask.cshtml")
+    </div>
+    <br />
+    <div class="modal-footer text-center">
+        <div class="col-sm-12">
+           @*  <img src="~/loading/loading.gif" id="loading-general" class="invisible" style="width: 2.29em; height: 2.29em;" /> *@
+            <input type="button" class="btn btn-success" id="guardar" onclick="SendTask();" value="Guardar" />
+        </div>
+    </div>
+</form>

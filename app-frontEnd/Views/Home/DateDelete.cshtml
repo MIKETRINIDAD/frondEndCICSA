@@ -1,0 +1,22 @@
+﻿@using app_frontEnd.Models;
+@model TaskModels
+
+<form id="Form-Task">
+    <div id="Datos-Task">
+        <div class="row">
+            @Html.HiddenFor(x => x._id, new { name = "_id", id = "_id" })
+            <div class="card">
+                <div class="card-body">
+                    ¿Desea eliminar la tarea <strong>@Model.name</strong> ?
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="modal-footer text-center">
+        <div class="col-sm-12">
+            <input type="button" class="btn btn-success" id="guardar" onclick="DeleteTask();" value="Eliminar" />
+        </div>
+    </div>
+</form>
+

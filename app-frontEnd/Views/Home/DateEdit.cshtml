@@ -1,0 +1,43 @@
+﻿@using app_frontEnd.Models;
+@model TaskModels
+<form id="formEditar">
+    <div id="datosEditar">
+        <div class="row">
+            <div class=" col-sm-6">
+                @Html.HiddenFor(x => x._id, new { name = "_id", id = "_id" })
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="fw-bold">Nombre: </label>
+                    </div>
+                    <div class="col-sm-7">
+                        @Html.EditorFor(x => x.name, new { HtmlAttributes = new { @class = "form-control form-control-sm", name = "name", id = "name" } })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-3 col-sm-9">
+                    </div>
+                </div>
+            </div>
+            <div class=" col-sm-6">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <label class="fw-bold">Descripción: </label>
+                    </div>
+                    <div class="col-sm-7">
+                        @Html.EditorFor(x => x.description, new { HtmlAttributes = new { @class = "form-control form-control-sm", name = "description", id = "description" } })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="offset-3 col-sm-9">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<br />
+<div class="modal-footer text-center">
+    <div class="col-sm-12">
+        <input type="button" class="btn btn-success" id="guardar" onclick="UpdateTask();" value="Guardar" />
+    </div>
+</div>

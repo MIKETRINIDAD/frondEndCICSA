@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Tareas";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <button class="btn btn-success fw-bold" onclick="NewTask();" data-bs-toggle="modal" data-bs-target="#Nuevo">Nuevo</button>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div id="listado">
+            @Html.PartialAsync(".../Home/Listado.cshtml")
+        </div>
+    </div>
+</div>
+@{
+    //creamos el objeto random y asignamos a una variable string
+    Random r = new Random();
+    string serial = r.Next().ToString();
+}
+
+@section Scripts {
+    <script src="~/ajax/task.js?@serial"></script>
+}

@@ -1,0 +1,58 @@
+﻿<!-- Modal -->
+<div class="modal fade" id="Nuevo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Nuevo" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Nuevo"><strong>Nuevo</strong></h5>
+                <button type="button" class="btn-close" id="closeNuevo" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="bodynuevo" class="modal-body bg-light">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="Editar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Editar" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Editar"><strong>Editar</strong></h5>
+                <button type="button" class="btn-close" id="closeEditar" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="bodyeditar" class="modal-body bg-light">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="Eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Eliminar" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="Eliminar"><strong>Eliminar</strong></h5>
+                <button type="button" class="btn-close" id="closeEliminar" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="bodyeliminar" class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="Conf" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Conf" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" id="closeConf" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="bodyConf" class="modal-body bg-light">
+                <div class="row">
+                    <div class="text-center">
+                        <h5><strong>¿Deseas salir del sistema?</strong></h5>
+                    </div>
+                </div>
+                <br />
+                <div class="container text-center">
+                    <a class="btn btn-outline-success" asp-action="Logout" asp-controller="AcessSystem">Cerrar</a>
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal" onclick="CloseConf();">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
